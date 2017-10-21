@@ -1,5 +1,9 @@
 <template>
-  <router-view />
+  <v-app>
+    <router-view />
+  </v-app>
 </template>
 
-<style lang="scss" src="@styles/style.scss"></style>
+<style lang="scss">
+
+</style>

@@ -1,6 +1,12 @@
-import Validate from 'vee-validate'
 import axios from 'axios'
+import Validate from 'vee-validate'
+import Vuetify from 'vuetify'
 
 axios.defaults.baseURL = process.env.API
 
-export default (Vue) => Vue.use(Validate)
+const install = (Vue) => {
+  Vue.use(Validate)
+  Vue.use(Vuetify)
+}
+
+export default install
