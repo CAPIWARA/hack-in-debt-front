@@ -12,7 +12,8 @@ module.exports = {
     'plugin:vue/recommended'
   ],
   rules: {
-    'indent': ['error', 2],
+    'indent': 'off',
+    'indent-legacy': ['error', 2],
     'no-cond-assign': 0,
     'arrow-parens': 0,
     'generator-star-spacing': 0,
