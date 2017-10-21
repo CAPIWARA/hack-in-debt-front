@@ -19,7 +19,7 @@ const rules = {
     loader: 'sass-loader',
     options: {
       sourceMap: CSS_SOURCE_MAP,
-      data: '@import "~vue-convenia-components/src/style/reference.scss";'
+      data: '@import "~@styles/style.scss";'
     }
   }
 }

@@ -15,11 +15,8 @@
     "axios": "^0.16.2",
     "babel-polyfill": "^6.26.0",
     "moment": "^2.19.1",
-    "rollbar": "^2.2.10",
     "vee-validate": "^2.0.0-rc.19",
     "vue": "^2.5.2",
-    "vue-convenia-components": "git+ssh://git@gitlab.com:convenia-frontend/vue-convenia-components.git",
-    "vue-convenia-util": "^0.6.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.0"
   },
