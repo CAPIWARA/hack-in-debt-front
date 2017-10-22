@@ -1,66 +1,75 @@
 <template>
-  <v-form>
-    <v-text-field
-      label="Nome"
-      required
-      v-model="nome"
-      :rules="rules.required"
-    />
-    <v-text-field
-      label="CNPJ"
-      mask="##.###.###/####-##"
-      required
-      v-model="cnpj"
-      :rules="rules.cnpj"
-      :counter="14"
-    />
-    <v-text-field
-      label="Telefone"
-      mask="(##) #####-####"
-      required
-      v-model="telefone"
-      :rules="rules.required"
-    />
-    <v-text-field
-      label="Senha"
-      type="password"
-      required
-      v-model="login.password"
-      :rules="rules.password"
-      :counter="8"
-    />
-    <v-text-field
-      label="Confirme sua senha"
-      type="password"
-      required
-      v-model="confirmation"
-      :rules="rules.confirmation"
-      :counter="8"
-    />
-    <v-text-field
-      label="E-Mail"
-      type="email"
-      required
-      v-model="login.email"
-      :rules="rules.email"
-    />
-    <v-text-field
-      label="Foto"
-      v-model="foto"
-    />
-    <v-text-field
-      label="Site"
-      v-model="site"
-    />
-    <v-text-field
-      label="Endereço"
-      required
-      v-model="endereco"
-      :rules="rules.required"
-    />
-    <v-btn type="submit" color="primary" @click="submit">Cadastrar</v-btn>
-    <v-btn :to="{ name: 'Entrar' }">Entrar</v-btn>
-  </v-form>
+  <v-layout row justify-center align-center>
+    <v-flex xs12 sm10 md8>
+      <v-card>
+        <v-toolbar color="cyan" dark>
+          <v-toolbar-title>Cadastrar</v-toolbar-title>
+        </v-toolbar>
+        <v-form class="pa-3">
+          <v-text-field
+            label="Nome"
+            required
+            v-model="nome"
+            :rules="rules.required"
+          />
+          <v-text-field
+            label="CNPJ"
+            mask="##.###.###/####-##"
+            required
+            v-model="cnpj"
+            :rules="rules.cnpj"
+            :counter="14"
+          />
+          <v-text-field
+            label="Telefone"
+            mask="(##) #####-####"
+            required
+            v-model="telefone"
+            :rules="rules.required"
+          />
+          <v-text-field
+            label="Senha"
+            type="password"
+            required
+            v-model="login.password"
+            :rules="rules.password"
+            :counter="8"
+          />
+          <v-text-field
+            label="Confirme sua senha"
+            type="password"
+            required
+            v-model="confirmation"
+            :rules="rules.confirmation"
+            :counter="8"
+          />
+          <v-text-field
+            label="E-Mail"
+            type="email"
+            required
+            v-model="login.email"
+            :rules="rules.email"
+          />
+          <v-text-field
+            label="Foto"
+            v-model="foto"
+          />
+          <v-text-field
+            label="Site"
+            v-model="site"
+          />
+          <v-text-field
+            label="Endereço"
+            required
+            v-model="endereco"
+            :rules="rules.required"
+          />
+          <v-btn type="submit" color="primary" @click="submit">Cadastrar</v-btn>
+          <v-btn :to="{ name: 'Entrar' }">Entrar</v-btn>
+        </v-form>
+      </v-card>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>

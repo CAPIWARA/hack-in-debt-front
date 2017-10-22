@@ -4,7 +4,7 @@ import store from '@store'
 import { AUTH_CHECK } from '@store/types'
 import SignIn from '@components/Auth/SignIn'
 import SignUp from '@components/Auth/SignUp'
-import Studant from '@components/Data/Studant'
+import Student from '@components/Data/Student'
 
 Vue.use(Router)
 
@@ -30,7 +30,7 @@ const router = new Router({
       ...roles('visitor'),
       path: '/estudante',
       name: 'Estudantes',
-      component: Studant
+      component: Student
     }
   ]
 })

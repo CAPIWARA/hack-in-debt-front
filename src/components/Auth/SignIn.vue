@@ -1,21 +1,32 @@
 <template>
-  <v-form @submit.prevent>
-    <v-text-field
-      label="E-Mail"
-      type="email"
-      v-model="email"
-      :rules="rules.email"
-      required />
-    <v-text-field
-      label="Senha"
-      type="password"
-      v-model="password"
-      :rules="rules.password"
-      :counter="10"
-      required />
-    <v-btn type="submit" color="primary" @click="submit">Entrar</v-btn>
-    <v-btn :to="{ name: 'Cadastrar' }">Cadastrar</v-btn>
-  </v-form>
+  <v-layout row justify-center align-center>
+    <v-flex xs12 sm10 md8>
+      <v-card>
+        <v-toolbar color="cyan" dark>
+          <v-toolbar-title>Entrar</v-toolbar-title>
+        </v-toolbar>
+
+        <v-form @submit.prevent class="pa-3">
+          <v-text-field
+            label="E-Mail"
+            type="email"
+            v-model="email"
+            :rules="rules.email"
+            required />
+          <v-text-field
+            label="Senha"
+            type="password"
+            v-model="password"
+            :rules="rules.password"
+            :counter="10"
+            required />
+
+          <v-btn type="submit" color="primary" @click="submit">Entrar</v-btn>
+          <v-btn :to="{ name: 'Cadastrar' }">Cadastrar</v-btn>
+        </v-form>
+      </v-card>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
@@ -42,3 +53,9 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .content,
+  .content > .container,
+  .container > .card { height: 100% }
+</style>

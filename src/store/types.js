@@ -17,8 +17,8 @@ export const AUTH_SIGNOUT = 'auth/AUTH_SIGNOUT'
 export const AUTH_SIGNUP = 'auth/AUTH_SIGNUP'
 
 /**
- *
+ * Tipos da Store de Estudante/Estudantes.
+ * @private
  */
-export const STUDENTS = 'students/STUDENTS'
+export const STUDENT = 'students/STUDENT'
 export const STUDENTS_INCLUDE = 'students/STUDENTS_INCLUDE'
-export const STUDENTS_EXCLUDE = 'students/STUDENTS_EXCLUDE'
