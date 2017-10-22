@@ -1,6 +1,4 @@
 {
-  "stylelint.enable": true,
   "css.validate": false,
-  "scss.validate": false,
-  "stylelint.additionalDocumentSelectors": ["vue"]
+  "scss.validate": false
 }

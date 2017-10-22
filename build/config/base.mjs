@@ -1,6 +1,5 @@
 import { resolve, resolveAssets, generateStyleLoader } from '../util'
 import webpack from 'webpack'
-import formatter from 'eslint-friendly-formatter'
 import globals from '../globals'
 
 const { JS_SOURCE_MAP, CSS_MINIFY, CSS_SOURCE_MAP, env } = globals
@@ -57,13 +56,6 @@ const config = {
       {
         test: /\.scss$/,
         use: generateStyleLoader(rules.css, rules.scss)
-      },
-      {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src')],
-        options: { formatter }
       },
       {
         test: /\.vue$/,
