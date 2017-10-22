@@ -1,5 +1,5 @@
 <template>
-  <v-form>
+  <v-form @submit.prevent>
     <v-text-field
       label="E-Mail"
       type="email"
@@ -13,7 +13,7 @@
       :rules="rules.password"
       :counter="10"
       required />
-    <v-btn color="primary" @click="submit">Entrar</v-btn>
+    <v-btn type="submit" color="primary" @click="submit">Entrar</v-btn>
     <v-btn :to="{ name: 'Cadastrar' }">Cadastrar</v-btn>
   </v-form>
 </template>

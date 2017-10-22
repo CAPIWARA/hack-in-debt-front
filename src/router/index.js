@@ -4,6 +4,7 @@ import store from '@store'
 import { AUTH_CHECK } from '@store/types'
 import SignIn from '@components/Auth/SignIn'
 import SignUp from '@components/Auth/SignUp'
+import Studant from '@components/Data/Studant'
 
 Vue.use(Router)
 
@@ -24,6 +25,12 @@ const router = new Router({
       path: '/cadastrar',
       name: 'Cadastrar',
       component: SignUp
+    },
+    {
+      ...roles('visitor'),
+      path: '/estudante',
+      name: 'Estudantes',
+      component: Studant
     }
   ]
 })
@@ -34,13 +41,10 @@ router.beforeEach(async (to, from, next) => {
   const roles = (to.meta && to.meta.roles) || ['*']
   const can = roles.includes('*') || roles.includes(role)
 
-  if (!can && role === 'visitor') {
-    next({ name: 'Entrar' })
-  } else if (!can && role === 'user') {
-    next({ name: 'Home' })
-  } else {
-    next()
-  }
+  const params = !can && role === 'visitor' ? { name: 'Entrar' }
+               : !can && role === 'user' ? { name: 'Home' }
+               : undefined
+  next(params)
 })
 
 export default router

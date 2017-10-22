@@ -34,7 +34,7 @@ const actions = {
     return !!getters[types.AUTH]
   },
   [types.AUTH_SIGNIN]: async ({ commit }, payload) => {
-    const { headers } = await axios.post('/', payload)
+    const { headers } = await axios.post('/login', payload)
     const authorization = headers.authorization || headers.Authorization
 
     if (!authorization) {

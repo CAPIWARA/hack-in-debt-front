@@ -58,7 +58,7 @@
       v-model="endereco"
       :rules="rules.required"
     />
-    <v-btn color="primary" @click="submit">Cadastrar</v-btn>
+    <v-btn type="submit" color="primary" @click="submit">Cadastrar</v-btn>
     <v-btn :to="{ name: 'Entrar' }">Entrar</v-btn>
   </v-form>
 </template>
