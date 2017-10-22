@@ -4,6 +4,8 @@ import store from '@store'
 import App from './App'
 import Plugins from './plugins'
 
+import('vuetify/dist/vuetify.min.css')
+
 Vue.config.productionTip = false
 
 Vue.use(Plugins)

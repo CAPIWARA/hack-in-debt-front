@@ -1,3 +1,7 @@
-import notifications from './notifications'
+import auth from '@store/modules/auth'
+import notifications from '@store/modules/notifications'
 
-export default { notifications }
+export default {
+  auth,
+  notifications
+}

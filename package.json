@@ -14,12 +14,14 @@
   "dependencies": {
     "axios": "^0.16.2",
     "babel-polyfill": "^6.26.0",
+    "jwt-decode": "^2.2.0",
     "moment": "^2.19.1",
     "vee-validate": "^2.0.0-rc.19",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuetify": "^0.16.9",
-    "vuex": "^3.0.0"
+    "vuex": "^3.0.0",
+    "vuex-shortly": "^0.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.5",
