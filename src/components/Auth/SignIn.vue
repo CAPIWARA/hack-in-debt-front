@@ -45,7 +45,8 @@
       async submit () {
         const { rules: _, ...data } = this.$data
         await this.$store.dispatch(types.AUTH_SIGNIN, data)
-        this.$router.push({ name: 'Cadastrar' })
+        await this.$store.cache.dispatch(types.STUDENT, this.email)
+        this.$router.push({ name: 'Dashboard' })
       },
       subscribe () {
         this.$router.push({ name: 'Cadastrar' })

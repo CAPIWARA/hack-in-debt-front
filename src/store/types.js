@@ -22,3 +22,9 @@ export const AUTH_SIGNUP = 'auth/AUTH_SIGNUP'
  */
 export const STUDENT = 'students/STUDENT'
 export const STUDENTS_INCLUDE = 'students/STUDENTS_INCLUDE'
+
+/**
+ * Tipos da Store de Benefícios.
+ * @private
+ */
+export const BENEFITS = 'benefits/BENEFITS'
